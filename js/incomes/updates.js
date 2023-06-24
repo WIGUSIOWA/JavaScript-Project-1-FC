@@ -4,6 +4,7 @@ import { incomes, deleteIncome } from "./actions.js";
 
 export const renderIncomesList = () => {
 	incomesList.innerHTML = "";
+	
 	for (let income of incomes) {
 		const listElement = document.createElement("li");
 		listElement.classList.add("list-income-item");
@@ -29,14 +30,17 @@ export const renderIncomesList = () => {
 		removeButton.id = income.id;
 		removeButton.innerText = "Usuń";
 
-		listElement.appendChild(name);
-		listElement.appendChild(value);
+	
 		buttonsWrapper.appendChild(editButton);
 		buttonsWrapper.appendChild(removeButton);
-		listElement.appendChild(buttonsWrapper);
 		incomesList.appendChild(listElement);
 
-		listElementWrapper.appendChild(updateInputsWrapper);
+		listElementWrapper.appendChild(name);
+		listElementWrapper.appendChild(value);
+		listElementWrapper.appendChild(buttonsWrapper);
+
+		listElement.appendChild(listElementWrapper)
+
 		removeButton.addEventListener("click", deleteIncome);
 		editButton.addEventListener("click", renderUpdateInputs);
 	}
@@ -55,6 +59,9 @@ const calculateIncomesSum = () => {
 const renderUpdateInputs = (e) => {
 	const id = e.target.id;
 	const listElement = document.getElementById(id);
+
+	// const listElementWrapper=document.createElement('div');
+	// listElementWrapper.classList.add('income-list-element-wrapper');
 
 	const updateInputsWrapper = document.createElement("div");
 	updateInputsWrapper.id = `update-${id}`;
@@ -78,5 +85,5 @@ const renderUpdateInputs = (e) => {
 	updateInputsWrapper.appendChild(saveButton);
 	updateInputsWrapper.appendChild(cancelButton);
 
-	listElement.appendChild(updateInputsWrapper);
+	listElement.appendChild(updateInputsWrapper)
 };
