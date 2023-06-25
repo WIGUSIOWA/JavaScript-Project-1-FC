@@ -1,38 +1,38 @@
 "use strict";
-import { displayCurrentBalance, incomesList, incomesSum } from "../main.js";
-import { incomes, deleteIncome, editIncomesList } from "./actions.js";
+import { displayCurrentBalance, outcomesList, outcomesSum } from "../main.js";
+import { outcomes, deleteOutcome, editOutcomesList } from "./actions.js";
 
-export const renderIncomesList = () => {
-	incomesList.innerHTML = "";
+export const renderOutcomesList = () => {
+	outcomesList.innerHTML = "";
 
-	for (let income of incomes) {
+	for (let outcome of outcomes) {
 		const listElement = document.createElement("li");
-		listElement.classList.add("list-income-item");
-		listElement.id = income.id;
+		listElement.classList.add("list-outcome-item");
+		listElement.id = outcome.id;
 
 		const listElementWrapper = document.createElement("div");
-		listElementWrapper.classList.add("income-list-element-wrapper");
+		listElementWrapper.classList.add("outcome-list-element-wrapper");
 
 		const name = document.createElement("p");
-		name.innerText = income.name;
+		name.innerText = outcome.name;
 
 		const value = document.createElement("p");
-		value.innerText = income.value;
+		value.innerText = outcome.value;
 
 		const buttonsWrapper = document.createElement("div");
 		buttonsWrapper.classList.add("buttons-wrapper");
 
 		const editButton = document.createElement("button");
-		editButton.id = income.id;
+		editButton.id = outcome.id;
 		editButton.innerText = "Edytuj";
 
 		const removeButton = document.createElement("button");
-		removeButton.id = income.id;
+		removeButton.id = outcome.id;
 		removeButton.innerText = "Usuń";
 
 		buttonsWrapper.appendChild(editButton);
 		buttonsWrapper.appendChild(removeButton);
-		incomesList.appendChild(listElement);
+		outcomesList.appendChild(listElement);
 
 		listElementWrapper.appendChild(name);
 		listElementWrapper.appendChild(value);
@@ -40,19 +40,19 @@ export const renderIncomesList = () => {
 
 		listElement.appendChild(listElementWrapper);
 
-		removeButton.addEventListener("click", deleteIncome);
+		removeButton.addEventListener("click", deleteOutcome);
 		editButton.addEventListener("click", renderUpdateInputs);
 	}
 
-	calculateIncomesSum();
+	calculateOutcomesSum();
 };
 
-const calculateIncomesSum = () => {
-	const _incomesSum = incomes.reduce((acc, income) => {
-		return acc + income.value;
+const calculateOutcomesSum = () => {
+	const _outcomesSum = outcomes.reduce((acc, outcome) => {
+		return acc + outcome.value;
 	}, 0);
 
-	incomesSum.innerText = _incomesSum;
+	outcomesSum.innerText = _outcomesSum;
 	displayCurrentBalance();
 };
 
@@ -69,9 +69,9 @@ const renderUpdateInputs = (e) => {
 	const nameInput = document.createElement("input");
 	nameInput.id = `update-name-${id}`;
 
-	const incomeInput = document.createElement("input");
-	incomeInput.type = "number";
-	incomeInput.id = `update-income-${id}`;
+	const outcomeInput = document.createElement("input");
+	outcomeInput.type = "number";
+	outcomeInput.id = `update-outcome-${id}`;
 
 	const saveButton = document.createElement("button");
 	saveButton.innerText = "SAVE";
@@ -82,14 +82,14 @@ const renderUpdateInputs = (e) => {
 	cancelButton.id = `update-cancel-${id}`;
 
 	updateInputsWrapper.appendChild(nameInput);
-	updateInputsWrapper.appendChild(incomeInput);
+	updateInputsWrapper.appendChild(outcomeInput);
 	updateInputsWrapper.appendChild(saveButton);
 	updateInputsWrapper.appendChild(cancelButton);
 
 	listElement.appendChild(updateInputsWrapper);
 
 	cancelButton.addEventListener("click", cancelEditInputs);
-	saveButton.addEventListener("click", editIncomesList);
+	saveButton.addEventListener("click", editOutcomesList);
 };
 
 const cancelEditInputs = (e) => {
