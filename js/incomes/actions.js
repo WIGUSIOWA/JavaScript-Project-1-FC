@@ -28,3 +28,29 @@ export const deleteIncome = (e) => {
 
 	renderIncomesList();
 };
+
+export const editIncomesList = (e) => {
+	e.preventDefault();
+	const idToEdit = e.target.id.split("-")[2];
+	const nameValue = document.getElementById(`update-name-${idToEdit}`).value;
+	const incomeValue = document.getElementById(
+		`update-income-${idToEdit}`
+	).value;
+
+	console.log(idToEdit, nameValue, incomeValue);
+
+	if (nameValue && incomeValue) {
+		incomes = incomes.map((income) => {
+			if (income.id === idToEdit) {
+				return {
+					...income,
+					name: nameValue,
+					value: Number(incomeValue),
+				};
+			}
+			return income;
+		});
+
+		renderIncomesList();
+	}
+};
