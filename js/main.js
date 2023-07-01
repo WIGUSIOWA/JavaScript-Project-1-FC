@@ -28,11 +28,11 @@ export const displayCurrentBalance = () => {
 		balanceInfoText.innerText = `Wydałaś za dużo, jesteś na minusie o ${
 			outcome - income
 		}zł.`;
-	} else if(income>outcome){
-        balanceInfoText.innerText = `Jesteś na plusie, możesz wydać  jeszcze   ${income-outcome} zł`;
-	
-    }else{
-
-        balanceInfoText.innerText=`Bilans Twojego budżetu wynosi zero zł.`;
-    }
+	} else if (income > outcome) {
+		balanceInfoText.innerText = `Jesteś na plusie, możesz wydać jeszcze ${
+			income - outcome
+		} zł`;
+	} else {
+		balanceInfoText.innerText = `Bilans wynosi zero zł.`;
+	}
 };

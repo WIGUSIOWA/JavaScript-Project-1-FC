@@ -1,5 +1,23 @@
 * {
 	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	/* color:beige */
+	/* font-size: 16px; */
+	cursor: pointer;
+
+
+.container{
+	margin: 0 auto;
+	border: 2px solid black;
+	border-radius: 30px;
+	padding: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	font-size: 18px;
+	background-color:rgb(177, 215, 110);
+	
 }
 
 .app-header {
@@ -8,10 +26,11 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	/* color: blue; */
 }
 
 .app-heading {
-	font-weight: 800;
+	/* font-weight: 800; */
 }
 
 .logo-image {
@@ -19,28 +38,41 @@
 	height: 150px;
 	object-fit: cover;
 	border-radius: 50%;
-}
-
+	/* border:4px solid black ; */
+	box-shadow:-webkit-box-shadow: -30px -25px 42px -14px rgba(170, 174, 205, 1);
+	-moz-box-shadow: -30px -25px 42px -14px rgba(170, 174, 205, 1);
+	box-shadow: -30px -25px 42px -14px rgba(170, 174, 205, 1);
+}	
+	
 .app-main {
 	width: 100%;
 	display: flex;
 	gap: 10px;
+	
+	
 }
 
 .incomes-wrapper {
 	width: 100%;
-	border: 2px solid green;
+	border: 2px solid blueviolet;
 	padding: 30px 15px;
+	border-radius: 20px;
+	font-size: 18px;
+	background-color: #fff;
+	
 }
 
 .outcomes-wrapper {
 	width: 100%;
-	border: 2px solid red;
+	border: 2px solid orangered;
 	padding: 30px 15px;
+	border-radius: 20px;
+	background-color: #fff;
 }
 
-.incomes-list{
-    padding: 0;
+.incomes-list {
+	padding: 0;
+	color: black;
 }
 
 .list-income-item {
@@ -48,11 +80,30 @@
 	flex-direction: column;
 	justify-content: center;
 	gap: 15px;
+	color: black;
 }
 
-.income-list-element-wrapper{
+.income-list-element-wrapper {
 	display: flex;
 	align-items: center;
 	gap: 10%;
-
+	
 }
+
+.outcome-list-element-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 10%;
+}
+
+.list-outcome-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 15px;
+}
+
+.incomes-inputs{
+	font-size: 20px;
+}
+
