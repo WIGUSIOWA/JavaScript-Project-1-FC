@@ -4,7 +4,7 @@
 	/* color:beige */
 	/* font-size: 16px; */
 	cursor: pointer;
-
+}
 
 .container{
 	margin: 0 auto;
@@ -30,7 +30,8 @@
 }
 
 .app-heading {
-	/* font-weight: 800; */
+	font-weight: 800;
+	
 }
 
 .logo-image {
@@ -39,7 +40,7 @@
 	object-fit: cover;
 	border-radius: 50%;
 	/* border:4px solid black ; */
-	box-shadow:-webkit-box-shadow: -30px -25px 42px -14px rgba(170, 174, 205, 1);
+	box-shadow:-webkit-box-shadow -30px -25px 42px -14px rgba(170, 174, 205, 1);
 	-moz-box-shadow: -30px -25px 42px -14px rgba(170, 174, 205, 1);
 	box-shadow: -30px -25px 42px -14px rgba(170, 174, 205, 1);
 }	
