@@ -7,13 +7,13 @@ export let incomes = [];
 export const addIncome = (e) => {
 	e.preventDefault();
 
-	const _income = {
+	const income = {
 		name: incomeName.value,
 		value: Number(incomeValue.value),
 		id: Math.random().toString(),
 	};
 
-	incomes.push(_income);
+	incomes.push(income);
 
 	renderIncomesList();
 
@@ -36,8 +36,6 @@ export const editIncomesList = (e) => {
 	const incomeValue = document.getElementById(
 		`update-income-${idToEdit}`
 	).value;
-
-	console.log(idToEdit, nameValue, incomeValue);
 
 	if (nameValue && incomeValue) {
 		incomes = incomes.map((income) => {

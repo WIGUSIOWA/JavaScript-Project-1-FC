@@ -60,9 +60,6 @@ const renderUpdateInputs = (e) => {
 	const id = e.target.id;
 	const listElement = document.getElementById(id);
 
-	// const listElementWrapper=document.createElement('div');
-	// listElementWrapper.classList.add('income-list-element-wrapper');
-
 	const updateInputsWrapper = document.createElement("div");
 	updateInputsWrapper.id = `update-${id}`;
 
