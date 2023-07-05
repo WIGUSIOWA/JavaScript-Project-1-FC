@@ -21,14 +21,14 @@
 		margin-top: 60px;
 	}
 
-	
+	.incomes-wrapper {
+		text-align: center;
+	}
 
 	.incomes-heading {
 		font-size: 32px;
-        text-align: left;
+		text-align: left;
 	}
-
-	
 
 	#income-name {
 		height: 50px;
@@ -40,24 +40,14 @@
 		font-size: 20px;
 	}
 
-
-
-    
-
 	.outcomes-wrapper {
 		font-size: 24px;
 		background-color: ivory;
 	}
 
 	.outcomes-heading {
-		font-size: 24px;
-	}
-
-	.list-outcome-item {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: 15px;
+		font-size: 32px;
+		text-align: left;
 	}
 
 	#outcome-name {
