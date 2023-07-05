@@ -1,7 +1,76 @@
 /* small-computer */
 
-@media screen and(min-width:1025px) {
+@media screen and (min-width: 1025px) {
 	.container {
 		width: 1000px;
+	}
+
+	.container {
+		background-color: whitesmoke;
+	}
+
+	.app-heading {
+		font-size: 32px;
+		font-weight: 900;
+		margin-bottom: 70px;
+	}
+
+	#info-text {
+		font-size: 28px;
+		padding: 40px 100px;
+		margin-top: 60px;
+	}
+
+	
+
+	.incomes-heading {
+		font-size: 32px;
+        text-align: left;
+	}
+
+	
+
+	#income-name {
+		height: 50px;
+		font-size: 20px;
+	}
+
+	#income-value {
+		height: 50px;
+		font-size: 20px;
+	}
+
+
+
+    
+
+	.outcomes-wrapper {
+		font-size: 24px;
+		background-color: ivory;
+	}
+
+	.outcomes-heading {
+		font-size: 24px;
+	}
+
+	.list-outcome-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 15px;
+	}
+
+	#outcome-name {
+		height: 50px;
+		font-size: 20px;
+	}
+
+	#outcome-value {
+		height: 50px;
+		font-size: 20px;
+	}
+
+	.outcome-total {
+		margin-top: 60px;
 	}
 }

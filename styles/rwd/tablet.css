@@ -1,7 +1,109 @@
 /* tablet */
 
-@media screen and(min-width:769px) {
+@media screen and (min-width: 769px) {
 	.container {
 		width: 90%;
+	}
+
+	.container {
+		background-color: rgb(242, 245, 226);
+	}
+
+	.app-header {
+		padding: 30px 0;
+	}
+
+	.app-heading {
+		font-size: 28px;
+		font-weight: 800;
+		margin-bottom: 50px;
+	}
+
+	.logo-image {
+		width: 300px;
+		height: 500px;
+		border-radius: 40px;
+	}
+
+	.logo-image:hover {
+		transition: 1.5s;
+		transform: scalex(-1);
+		cursor: pointer;
+	}
+
+	.app-main {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+	}
+
+	#info-text {
+		font-size: 24px;
+		padding: 20px 100px;
+		margin-top: 40px;
+	}
+
+	#info-text:hover {
+		font-size: 24px;
+		background-color: black;
+		color: orange;
+		transition: 1s;
+		cursor: pointer;
+	}
+
+	.incomes-wrapper {
+		font-size: 24px;
+	}
+
+	.incomes-heading {
+		font-size: 24px;
+	}
+
+	.list-income-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 15px;
+		color: black;
+	}
+
+	#income-name {
+		height: 50px;
+		font-size: 20px;
+	}
+
+	#income-value {
+		height: 50px;
+		font-size: 20px;
+	}
+
+	.outcomes-wrapper {
+		font-size: 24px;
+		background-color: ivory;
+	}
+
+	.outcomes-heading {
+		font-size: 24px;
+	}
+
+	.list-outcome-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 15px;
+	}
+
+	#outcome-name {
+		height: 50px;
+		font-size: 20px;
+	}
+
+	#outcome-value {
+		height: 50px;
+		font-size: 20px;
+	}
+
+	.outcome-total {
+		margin-top: 60px;
 	}
 }
