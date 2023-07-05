@@ -3,37 +3,44 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="styles/main.css/main.css" />
+		<link rel="stylesheet" href="styles/rwd/tablet.css" />
+		<link rel="stylesheet" href="styles/rwd/small-computer.css" />
+		<link rel="stylesheet" href="styles/rwd/computer.css" />
 		<title>JavaScript Projekt 1 zaliczeniowy</title>
 	</head>
 	<body>
 		<header class="app-header">
 			<h1 class="app-heading">BUDŻET DOMOWY</h1>
-			<img class="logo-image" src="https://cataas.com/cat" alt="" />
-			<h2 id="info-text">Dodaj przychody/wydatki, aby zobaczyć bilans</h2>
+			<img class="logo-image" src="horse-copy640.jpg" alt="" />
+			<h2 id="info-text">Dodaj przychody/wydatki, aby zobaczyć TUTAJ bilans</h2>
 		</header>
 		<main class="app-main">
 			<div class="incomes-wrapper">
 				<h3 class="incomes-heading">PRZYCHODY</h3>
 				<div class="incomes-inputs">
-					<input id="income-name" type="text" />
-					<input id="income-value" type="number" />
+					<input id="income-name" type="text" placeholder="opis" />
+					<input id="income-value" type="number" placeholder="kwota" />
 					<button id="add-income-button">DODAJ</button>
 				</div>
 
 				<ul class="incomes-list" id="incomes-list"></ul>
-				<p>Suma przychodów: <span id="incomes-sum">0</span>zł</p>
+				<p class="income-total">
+					Suma przychodów: <span id="incomes-sum">0</span>zł
+				</p>
 			</div>
 			<div class="outcomes-wrapper">
 				<h3 class="outcomes-heading">WYDATKI</h3>
 				<div class="outcomes-inputs">
-					<input id="outcome-name" type="text" />
-					<input id="outcome-value" type="number" />
+					<input id="outcome-name" type="text" placeholder="opis" />
+					<input id="outcome-value" type="number" placeholder="kwota" />
 					<button id="add-outcome-button">DODAJ</button>
 				</div>
 
 				<ul class="outcomes-list" id="outcomes-list"></ul>
-				<p>Suma wydatków: <span id="outcomes-sum">0</span>zł</p>
+				<p class="outcome-total">
+					Suma wydatków: <span id="outcomes-sum">0</span>zł
+				</p>
 			</div>
 		</main>
 
