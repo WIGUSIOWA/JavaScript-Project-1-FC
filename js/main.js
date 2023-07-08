@@ -13,13 +13,13 @@ export const outcomesSum = document.getElementById("outcomes-sum");
 export const outcomeName = document.getElementById("outcome-name");
 export const outcomeValue = document.getElementById("outcome-value");
 const balanceInfoText = document.getElementById("info-text");
-const addIncomeButton = document.getElementById("add-income-button");
-const addOutcomeButton = document.getElementById("add-outcome-button");
+const incomesForm = document.getElementById("incomes-form");
+const outcomesForm = document.getElementById("outcomes-form");
 
 //functions:
 
-addIncomeButton.addEventListener("click", addIncome);
-addOutcomeButton.addEventListener("click", addOutcome);
+incomesForm.addEventListener("submit", addIncome);
+outcomesForm.addEventListener("submit", addOutcome);
 
 export const displayCurrentBalance = () => {
 	const outcome = Number(outcomesSum.innerText);

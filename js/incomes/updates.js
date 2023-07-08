@@ -15,9 +15,11 @@ export const renderIncomesList = () => {
 
 		const name = document.createElement("p");
 		name.innerText = income.name;
+		name.id = `income-name-${listElement.id}`;
 
 		const value = document.createElement("p");
 		value.innerText = income.value;
+		value.id = `income-value-${listElement.id}`;
 
 		const buttonsWrapper = document.createElement("div");
 		buttonsWrapper.classList.add("buttons-wrapper");
@@ -65,10 +67,12 @@ const renderUpdateInputs = (e) => {
 
 	const nameInput = document.createElement("input");
 	nameInput.id = `update-name-${id}`;
+	nameInput.value = document.getElementById(`income-name-${id}`).textContent;
 
 	const incomeInput = document.createElement("input");
 	incomeInput.type = "number";
 	incomeInput.id = `update-income-${id}`;
+	incomeInput.value = document.getElementById(`income-value-${id}`).textContent;
 
 	const saveButton = document.createElement("button");
 	saveButton.innerText = "SAVE";

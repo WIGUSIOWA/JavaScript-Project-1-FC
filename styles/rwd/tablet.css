@@ -1,12 +1,9 @@
 /* tablet */
-
 @media screen and (min-width: 769px) {
 	.container {
 		width: 90%;
-	}
-
-	.container {
 		background-color: rgb(242, 245, 226);
+		
 	}
 
 	.app-header {

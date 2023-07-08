@@ -1,5 +1,4 @@
 /* mobile-first */
-
 @media screen and (min-width: 350px) {
 	* {
 		box-sizing: border-box;
@@ -84,6 +83,11 @@
 	.incomes-heading {
 		font-size: 18px;
 	}
+
+	/* .app-name .incomes-inputs {
+		font-size: 18px;
+		margin-bottom: 5px;
+	} */
 
 	#income-name {
 		font-size: 18px;

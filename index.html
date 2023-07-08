@@ -21,11 +21,18 @@
 			<main class="app-main">
 				<div class="incomes-wrapper">
 					<h3 class="incomes-heading">PRZYCHODY</h3>
-					<div class="incomes-inputs">
-						<input id="income-name" type="text" placeholder="opis" />
-						<input id="income-value" type="number" placeholder="kwota" />
+					<form id="incomes-form" class="incomes-inputs">
+						<input id="income-name" type="text" placeholder="opis" required />
+						<input
+							id="income-value"
+							type="number"
+							placeholder="kwota"
+							required
+							min="0.01"
+							step="0.01"
+						/>
 						<button id="add-income-button">DODAJ</button>
-					</div>
+					</form>
 
 					<ul class="incomes-list" id="incomes-list"></ul>
 					<p class="income-total">
@@ -34,11 +41,18 @@
 				</div>
 				<div class="outcomes-wrapper">
 					<h3 class="outcomes-heading">WYDATKI</h3>
-					<div class="outcomes-inputs">
-						<input id="outcome-name" type="text" placeholder="opis" />
-						<input id="outcome-value" type="number" placeholder="kwota" />
+					<form id="outcomes-form" class="outcomes-inputs">
+						<input id="outcome-name" type="text" placeholder="opis" required />
+						<input
+							id="outcome-value"
+							type="number"
+							placeholder="kwota"
+							required
+							min="0.01"
+							step="0.01"
+						/>
 						<button id="add-outcome-button">DODAJ</button>
-					</div>
+					</form>
 
 					<ul class="outcomes-list" id="outcomes-list"></ul>
 					<p class="outcome-total">
