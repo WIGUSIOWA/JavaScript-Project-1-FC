@@ -15,9 +15,11 @@ export const renderOutcomesList = () => {
 
 		const name = document.createElement("p");
 		name.innerText = outcome.name;
+		name.id = `outcome-name-${listElement.id}`;
 
 		const value = document.createElement("p");
 		value.innerText = outcome.value;
+		value.id = `outcome-value-${listElement.id}`;
 
 		const buttonsWrapper = document.createElement("div");
 		buttonsWrapper.classList.add("buttons-wrapper");
@@ -65,10 +67,14 @@ const renderUpdateInputs = (e) => {
 
 	const nameInput = document.createElement("input");
 	nameInput.id = `update-name-${id}`;
+	nameInput.value = document.getElementById(`outcome-name-${id}`).textContent;
 
 	const outcomeInput = document.createElement("input");
 	outcomeInput.type = "number";
 	outcomeInput.id = `update-outcome-${id}`;
+	outcomeInput.value = document.getElementById(
+		`outcome-value-${id}`
+	).textContent;
 
 	const saveButton = document.createElement("button");
 	saveButton.innerText = "SAVE";
