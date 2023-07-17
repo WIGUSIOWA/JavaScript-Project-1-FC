@@ -2,6 +2,9 @@
 @media screen and (min-width: 350px) {
 	* {
 		box-sizing: border-box;
+	}
+
+	html {
 		font-family: Arial, Helvetica, sans-serif;
 	}
 
@@ -102,7 +105,7 @@
 		color: black;
 	}
 
-	#add-income-button {
+	.add-income-button {
 		padding: 10px 90px;
 		background-color: black;
 		color: orange;
@@ -149,7 +152,7 @@
 		color: black;
 	}
 
-	#add-outcome-button {
+	.add-outcome-button {
 		padding: 10px 90px;
 		background-color: black;
 		color: orange;
