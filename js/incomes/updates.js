@@ -61,36 +61,40 @@ const calculateIncomesSum = () => {
 const renderUpdateInputs = (e) => {
 	const id = e.target.id;
 	const listElement = document.getElementById(id);
+	const inputsExist = document.getElementById(`update-${id}`);
+	if (!inputsExist) {
+		const updateInputsWrapper = document.createElement("div");
+		updateInputsWrapper.id = `update-${id}`;
 
-	const updateInputsWrapper = document.createElement("div");
-	updateInputsWrapper.id = `update-${id}`;
+		const nameInput = document.createElement("input");
+		nameInput.id = `update-name-${id}`;
+		nameInput.value = document.getElementById(`income-name-${id}`).textContent;
 
-	const nameInput = document.createElement("input");
-	nameInput.id = `update-name-${id}`;
-	nameInput.value = document.getElementById(`income-name-${id}`).textContent;
+		const incomeInput = document.createElement("input");
+		incomeInput.type = "number";
+		incomeInput.id = `update-income-${id}`;
+		incomeInput.value = document.getElementById(
+			`income-value-${id}`
+		).textContent;
 
-	const incomeInput = document.createElement("input");
-	incomeInput.type = "number";
-	incomeInput.id = `update-income-${id}`;
-	incomeInput.value = document.getElementById(`income-value-${id}`).textContent;
+		const saveButton = document.createElement("button");
+		saveButton.innerText = "SAVE";
+		saveButton.id = `update-save-${id}`;
 
-	const saveButton = document.createElement("button");
-	saveButton.innerText = "SAVE";
-	saveButton.id = `update-save-${id}`;
+		const cancelButton = document.createElement("button");
+		cancelButton.innerText = "CANCEL";
+		cancelButton.id = `update-cancel-${id}`;
 
-	const cancelButton = document.createElement("button");
-	cancelButton.innerText = "CANCEL";
-	cancelButton.id = `update-cancel-${id}`;
+		updateInputsWrapper.appendChild(nameInput);
+		updateInputsWrapper.appendChild(incomeInput);
+		updateInputsWrapper.appendChild(saveButton);
+		updateInputsWrapper.appendChild(cancelButton);
 
-	updateInputsWrapper.appendChild(nameInput);
-	updateInputsWrapper.appendChild(incomeInput);
-	updateInputsWrapper.appendChild(saveButton);
-	updateInputsWrapper.appendChild(cancelButton);
+		listElement.appendChild(updateInputsWrapper);
 
-	listElement.appendChild(updateInputsWrapper);
-
-	cancelButton.addEventListener("click", cancelEditInputs);
-	saveButton.addEventListener("click", editIncomesList);
+		cancelButton.addEventListener("click", cancelEditInputs);
+		saveButton.addEventListener("click", editIncomesList);
+	}
 };
 
 const cancelEditInputs = (e) => {

@@ -9,7 +9,7 @@ export const addOutcome = (e) => {
 
 	const _outcome = {
 		name: outcomeName.value,
-		value: Number(outcomeValue.value),
+		value: Number(Number(outcomeValue.value).toFixed(2)),
 		id: Math.random().toString(),
 	};
 
@@ -31,6 +31,7 @@ export const deleteOutcome = (e) => {
 
 export const editOutcomesList = (e) => {
 	e.preventDefault();
+
 	const idToEdit = e.target.id.split("-")[2];
 	const nameValue = document.getElementById(`update-name-${idToEdit}`).value;
 	const outcomeValue = document.getElementById(
@@ -43,12 +44,11 @@ export const editOutcomesList = (e) => {
 				return {
 					...outcome,
 					name: nameValue,
-					value: Number(outcomeValue),
+					value: Number(Number(outcomeValue).toFixed(2)),
 				};
 			}
 			return outcome;
 		});
-
 		renderOutcomesList();
 	}
 };

@@ -9,7 +9,7 @@ export const addIncome = (e) => {
 
 	const income = {
 		name: incomeName.value,
-		value: Number(incomeValue.value).toFixed(2),
+		value: Number(Number(incomeValue.value).toFixed(2)),
 		id: Math.random().toString(),
 	};
 
@@ -39,25 +39,12 @@ export const editIncomesList = (e) => {
 	).value;
 
 	if (nameValue && incomeValue) {
-		const inputsExist = document.getElementById(`update-inputs-${idToEdit}`);
-		if (!inputsExist) {
-			const inputsContainer = document.createElement("div");
-			inputsContainer.id = `update-inputs-${idToEdit}`;
-			inputsContainer.innerHTML = `
-				<input type="text" id="update-name-${idToEdit}" value="${nameValue}">
-				<input type="number" id="update-income-${idToEdit}" value="${incomeValue}">
-			`;
-
-			document
-				.getElementById(`income-item-${idToEdit}`)
-				.appendChild(inputsContainer);
-		}
 		incomes = incomes.map((income) => {
 			if (income.id === idToEdit) {
 				return {
 					...income,
 					name: nameValue,
-					value: Number(incomeValue).toFixed(2),
+					value: Number(Number(incomeValue).toFixed(2)),
 				};
 			}
 			return income;

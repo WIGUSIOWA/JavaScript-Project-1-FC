@@ -61,38 +61,40 @@ const calculateOutcomesSum = () => {
 const renderUpdateInputs = (e) => {
 	const id = e.target.id;
 	const listElement = document.getElementById(id);
+	const inputsExist = document.getElementById(`update-${id}`);
+	if (!inputsExist) {
+		const updateInputsWrapper = document.createElement("div");
+		updateInputsWrapper.id = `update-${id}`;
 
-	const updateInputsWrapper = document.createElement("div");
-	updateInputsWrapper.id = `update-${id}`;
+		const nameInput = document.createElement("input");
+		nameInput.id = `update-name-${id}`;
+		nameInput.value = document.getElementById(`outcome-name-${id}`).textContent;
 
-	const nameInput = document.createElement("input");
-	nameInput.id = `update-name-${id}`;
-	nameInput.value = document.getElementById(`outcome-name-${id}`).textContent;
+		const outcomeInput = document.createElement("input");
+		outcomeInput.type = "number";
+		outcomeInput.id = `update-outcome-${id}`;
+		outcomeInput.value = document.getElementById(
+			`outcome-value-${id}`
+		).textContent;
 
-	const outcomeInput = document.createElement("input");
-	outcomeInput.type = "number";
-	outcomeInput.id = `update-outcome-${id}`;
-	outcomeInput.value = document.getElementById(
-		`outcome-value-${id}`
-	).textContent;
+		const saveButton = document.createElement("button");
+		saveButton.innerText = "SAVE";
+		saveButton.id = `update-save-${id}`;
 
-	const saveButton = document.createElement("button");
-	saveButton.innerText = "SAVE";
-	saveButton.id = `update-save-${id}`;
+		const cancelButton = document.createElement("button");
+		cancelButton.innerText = "CANCEL";
+		cancelButton.id = `update-cancel-${id}`;
 
-	const cancelButton = document.createElement("button");
-	cancelButton.innerText = "CANCEL";
-	cancelButton.id = `update-cancel-${id}`;
+		updateInputsWrapper.appendChild(nameInput);
+		updateInputsWrapper.appendChild(outcomeInput);
+		updateInputsWrapper.appendChild(saveButton);
+		updateInputsWrapper.appendChild(cancelButton);
 
-	updateInputsWrapper.appendChild(nameInput);
-	updateInputsWrapper.appendChild(outcomeInput);
-	updateInputsWrapper.appendChild(saveButton);
-	updateInputsWrapper.appendChild(cancelButton);
+		listElement.appendChild(updateInputsWrapper);
 
-	listElement.appendChild(updateInputsWrapper);
-
-	cancelButton.addEventListener("click", cancelEditInputs);
-	saveButton.addEventListener("click", editOutcomesList);
+		cancelButton.addEventListener("click", cancelEditInputs);
+		saveButton.addEventListener("click", editOutcomesList);
+	}
 };
 
 const cancelEditInputs = (e) => {
