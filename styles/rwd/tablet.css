@@ -11,7 +11,7 @@
 
 	.app-heading {
 		font-size: 28px;
-		font-weight: 800;
+		font-weight: 700;
 		margin-bottom: 50px;
 	}
 
@@ -25,12 +25,6 @@
 		transition: 1.5s;
 		transform: scalex(-1);
 		cursor: pointer;
-	}
-
-	.app-main {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
 	}
 
 	.info-text {
@@ -47,20 +41,16 @@
 		cursor: pointer;
 	}
 
+	.app-main {
+		flex-direction: row;
+	}
+
 	.incomes-wrapper {
 		font-size: 24px;
 	}
 
-	.incomes-heading {
+	.incomes-heading .outcomes-heading {
 		font-size: 24px;
-	}
-
-	.list-income-item {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: 15px;
-		color: black;
 	}
 
 	#income-name {
@@ -78,17 +68,6 @@
 		background-color: ivory;
 	}
 
-	.outcomes-heading {
-		font-size: 24px;
-	}
-
-	.list-outcome-item {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: 15px;
-	}
-
 	#outcome-name {
 		height: 50px;
 		font-size: 20px;
@@ -100,9 +79,10 @@
 	}
 
 	.outcome-total {
-		margin-top: 60px;
+		margin-top: 30px;
 	}
-}
-.save-button {
-	margin: 10px 40px;
+
+	.save-button {
+		margin: 10px 40px;
+	}
 }

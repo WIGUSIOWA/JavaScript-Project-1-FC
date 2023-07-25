@@ -12,55 +12,9 @@
 	.app-heading {
 		font-size: 32px;
 		font-weight: 600;
-		margin-bottom: 70px;
-	}
-
-	.info-text {
-		font-size: 28px;
-		padding: 40px 100px;
-		margin-top: 60px;
-	}
-
-	.incomes-wrapper {
-		text-align: center;
-	}
-
-	.incomes-heading {
-		font-size: 32px;
-		text-align: left;
-	}
-
-	#income-name {
-		height: 50px;
-		font-size: 20px;
-	}
-
-	#income-value {
-		height: 50px;
-		font-size: 20px;
-	}
-
-	.outcomes-wrapper {
-		font-size: 24px;
-		background-color: ivory;
-	}
-
-	.outcomes-heading {
-		font-size: 32px;
-		text-align: left;
-	}
-
-	#outcome-name {
-		height: 50px;
-		font-size: 20px;
-	}
-
-	#outcome-value {
-		height: 50px;
-		font-size: 20px;
 	}
 
 	.outcome-total {
-		margin-top: 24px;
+		margin-top: 30px;
 	}
 }
