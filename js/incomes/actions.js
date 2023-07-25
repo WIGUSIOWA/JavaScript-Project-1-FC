@@ -38,7 +38,7 @@ export const editIncomesList = (e) => {
 		`update-income-${idToEdit}`
 	).value;
 
-	if (nameValue && incomeValue) {
+	if (nameValue && parseFloat(incomeValue) >0){
 		incomes = incomes.map((income) => {
 			if (income.id === idToEdit) {
 				return {

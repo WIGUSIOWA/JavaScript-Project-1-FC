@@ -1,151 +1,154 @@
 /* mobile-first */
-@media screen and (min-width: 350px) {
-	* {
-		box-sizing: border-box;
-	}
+* {
+	box-sizing: border-box;
+}
 
-	html {
-		font-family: Arial, Helvetica, sans-serif;
-	}
+html {
+	font-family: Arial, Helvetica, sans-serif;
+}
 
-	.container {
-		width: 95%;
-		margin: 0 auto;
-		border: 2px solid black;
-		border-radius: 30px;
-		padding: 20px;
-		background-color: rgb(194, 209, 164);
-	}
+.container {
+	width: 95%;
+	margin: 0 auto;
+	border: 2px solid black;
+	border-radius: 30px;
+	padding: 20px;
+	background-color: rgb(194, 209, 164);
+}
 
-	.app-header {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		color: rgb(209, 110, 5);
-	}
+.app-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: rgb(209, 110, 5);
+}
 
-	.app-heading {
-		font-weight: 900;
-		color: rgb(3, 3, 3);
-		margin-bottom: 20px;
-		font-size: 20px;
-		letter-spacing: 2px;
-	}
+.app-heading {
+	font-weight: 900;
+	color: rgb(3, 3, 3);
+	margin-bottom: 20px;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
 
-	.logo-image {
-		width: 300px;
-		height: 300px;
-		border: 2px solid black;
-		object-fit: cover;
-		border-radius: 50%;
-		box-shadow: -webkit-box-shadow -30px -25px 42px -14px rgba(170, 174, 205, 1);
-		-moz-box-shadow: -30px -25px 42px -14px rgb(1, 1, 9);
-		box-shadow: -30px -25px 42px -14px rgb(30, 30, 30);
-	}
+.logo-image {
+	width: 300px;
+	height: 300px;
+	border: 2px solid black;
+	object-fit: cover;
+	border-radius: 50%;
+	box-shadow: -webkit-box-shadow -30px -25px 42px -14px rgba(170, 174, 205, 1);
+	-moz-box-shadow: -30px -25px 42px -14px rgb(1, 1, 9);
+	box-shadow: -30px -25px 42px -14px rgb(30, 30, 30);
+}
 
-	#info-text {
-		text-align: center;
-		color: black;
-		background-color: rgb(231, 172, 96);
-		border: 2px solid black;
-		font-size: 18px;
-		padding: 10px 10px;
-		margin: 15px;
-		border-radius: 15px;
-	}
+.info-text {
+	text-align: center;
+	color: black;
+	background-color: rgb(231, 172, 96);
+	border: 2px solid black;
+	font-size: 18px;
+	padding: 10px 10px;
+	margin: 15px;
+	border-radius: 15px;
+}
 
-	.app-main {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
-	}
+.app-main {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
 
-	.incomes-wrapper {
-		width: 100%;
-		border: 2px solid rgb(21, 13, 1);
-		padding: 2px 15px;
-		border-radius: 15px;
-		font-size: 18px;
-		background-color: rgb(231, 172, 96);
-		text-align: center;
-	}
+.incomes-wrapper {
+	width: 100%;
+	border: 2px solid rgb(21, 13, 1);
+	padding: 2px 15px;
+	border-radius: 15px;
+	font-size: 18px;
+	background-color: rgb(231, 172, 96);
+	text-align: center;
+}
 
-	.incomes-list {
-		padding: 5px;
-		color: black;
-	}
+.list-element-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 10%;
+}
 
-	.income-list-element-wrapper {
-		display: flex;
-		align-items: center;
-		gap: 10%;
-	}
+.incomes-list {
+	padding: 5px;
+	color: black;
+}
 
-	.incomes-heading {
-		font-size: 18px;
-	}
+.income-name-value {
+	font-size: 20px;
+}
 
-	.input {
-		font-size: 18px;
-		margin-bottom: 5px;
-	}
+.list-income-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 15px;
+	color: black;
+}
 
-	.list-income-item {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: 15px;
-		color: black;
-	}
+.add-button {
+	padding: 10px 90px;
+	background-color: black;
+	color: orange;
+}
 
-	.add-income-button {
-		padding: 10px 90px;
-		background-color: black;
-		color: orange;
-	}
+.incomes-inputs {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
 
-	.outcomes-wrapper {
-		width: 100%;
-		border: 2px solid black;
-		padding: 2px 15px;
-		border-radius: 15px;
-		font-size: 18px;
-		background-color: ivory;
-		text-align: center;
-	}
+.outcomes-wrapper {
+	width: 100%;
+	border: 2px solid black;
+	padding: 2px 15px;
+	border-radius: 15px;
+	font-size: 18px;
+	background-color: ivory;
+	text-align: center;
+}
 
-	.outcome-list-element-wrapper {
-		display: flex;
-		align-items: center;
-		gap: 10%;
-	}
+.list-outcome-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 15px;
+	color: black;
+}
 
-	.outcomes-heading {
-		font-size: 18px;
-	}
+.outcomes-inputs {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
 
-	.input {
-		font-size: 67px;
-		margin-bottom: 5px;
-	}
+.outcome-name-value {
+	font-size: 20px;
+}
 
-	.list-outcome-item {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: 15px;
-		color: black;
-	}
+.name {
+	overflow-wrap: break-word;
+}
 
-	.add-outcome-button {
-		padding: 10px 90px;
-		background-color: black;
-		color: orange;
-	}
+.edit-button {
+	background-color: ivory;
+	margin-right: 50px;
+	padding: 5px 10px;
+}
 
-	p {
-		font-weight: 900;
-	}
+.remove-button {
+	background-color: ivory;
+	padding: 5px 10px;
+}
+
+.save-button {
+	margin: 10px 60px;
 }

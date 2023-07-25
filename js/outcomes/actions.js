@@ -38,7 +38,7 @@ export const editOutcomesList = (e) => {
 		`update-outcome-${idToEdit}`
 	).value;
 
-	if (nameValue && outcomeValue) {
+	if (nameValue && parseFloat(outcomeValue) > 0) {
 		outcomes = outcomes.map((outcome) => {
 			if (outcome.id === idToEdit) {
 				return {

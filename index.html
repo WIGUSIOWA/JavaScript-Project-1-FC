@@ -14,7 +14,7 @@
 			<header class="app-header">
 				<h1 class="app-heading">BUDŻET DOMOWY</h1>
 				<img class="logo-image" src="assets/horse-copy640.jpg" alt="" />
-				<h2 id="info-text">
+				<h2 class="info-text" id="total-balance">
 					Dodaj przychody/wydatki, aby zobaczyć TUTAJ bilans
 				</h2>
 			</header>
@@ -22,8 +22,15 @@
 				<div class="incomes-wrapper">
 					<h3 class="incomes-heading">PRZYCHODY</h3>
 					<form id="incomes-form" class="incomes-inputs">
-						<input id="income-name" type="text" placeholder="opis" required />
 						<input
+							class="income-name-value"
+							id="income-name"
+							type="text"
+							placeholder="opis"
+							required
+						/>
+						<input
+							class="income-name-value"
 							id="income-value"
 							type="number"
 							placeholder="kwota"
@@ -31,19 +38,27 @@
 							min="0.01"
 							step="0.01"
 						/>
-						<button class="add-income-button">DODAJ</button>
+						<button class="add-button" type="submit">DODAJ</button>
 					</form>
 
 					<ul class="incomes-list" id="incomes-list"></ul>
 					<p class="income-total">
+						
 						Suma przychodów: <span id="incomes-sum">0.00</span> zł
 					</p>
 				</div>
 				<div class="outcomes-wrapper">
 					<h3 class="outcomes-heading">WYDATKI</h3>
 					<form id="outcomes-form" class="outcomes-inputs">
-						<input id="outcome-name" type="text" placeholder="opis" required />
 						<input
+							class="outcome-name-value"
+							id="outcome-name"
+							type="text"
+							placeholder="opis"
+							required
+						/>
+						<input
+							class="outcome-name-value"
 							id="outcome-value"
 							type="number"
 							placeholder="kwota"
@@ -51,7 +66,7 @@
 							min="0.01"
 							step="0.01"
 						/>
-						<button class="add-outcome-button">DODAJ</button>
+						<button class="add-button" type="'submit">DODAJ</button>
 					</form>
 
 					<ul class="outcomes-list" id="outcomes-list"></ul>

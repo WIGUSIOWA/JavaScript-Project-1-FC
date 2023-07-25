@@ -3,7 +3,6 @@
 	.container {
 		width: 90%;
 		background-color: rgb(242, 245, 226);
-		
 	}
 
 	.app-header {
@@ -34,13 +33,13 @@
 		flex-direction: row;
 	}
 
-	#info-text {
+	.info-text {
 		font-size: 24px;
 		padding: 20px 100px;
 		margin-top: 40px;
 	}
 
-	#info-text:hover {
+	.info-text:hover {
 		font-size: 24px;
 		background-color: black;
 		color: orange;
@@ -103,4 +102,7 @@
 	.outcome-total {
 		margin-top: 60px;
 	}
+}
+.save-button {
+	margin: 10px 40px;
 }

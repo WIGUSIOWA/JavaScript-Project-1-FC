@@ -11,11 +11,12 @@ export const renderOutcomesList = () => {
 		listElement.id = outcome.id;
 
 		const listElementWrapper = document.createElement("div");
-		listElementWrapper.classList.add("outcome-list-element-wrapper");
+		listElementWrapper.classList.add("list-element-wrapper");
 
 		const name = document.createElement("p");
 		name.innerText = outcome.name;
 		name.id = `outcome-name-${listElement.id}`;
+		name.classList.add("outcome-name");
 
 		const value = document.createElement("p");
 		value.innerText = outcome.value;
@@ -27,10 +28,12 @@ export const renderOutcomesList = () => {
 		const editButton = document.createElement("button");
 		editButton.id = outcome.id;
 		editButton.innerText = "Edytuj";
+		editButton.classList.add("edit-button");
 
 		const removeButton = document.createElement("button");
 		removeButton.id = outcome.id;
 		removeButton.innerText = "Usuń";
+		removeButton.classList.add("remove-button");
 
 		buttonsWrapper.appendChild(editButton);
 		buttonsWrapper.appendChild(removeButton);
@@ -63,12 +66,13 @@ const renderUpdateInputs = (e) => {
 	const listElement = document.getElementById(id);
 	const inputsExist = document.getElementById(`update-${id}`);
 	if (!inputsExist) {
-		const updateInputsWrapper = document.createElement("div");
+		const updateInputsWrapper = document.createElement("form");
 		updateInputsWrapper.id = `update-${id}`;
 
 		const nameInput = document.createElement("input");
 		nameInput.id = `update-name-${id}`;
 		nameInput.value = document.getElementById(`outcome-name-${id}`).textContent;
+		nameInput.required = true;
 
 		const outcomeInput = document.createElement("input");
 		outcomeInput.type = "number";
@@ -76,14 +80,20 @@ const renderUpdateInputs = (e) => {
 		outcomeInput.value = document.getElementById(
 			`outcome-value-${id}`
 		).textContent;
+		outcomeInput.required = true;
+		outcomeInput.min = "0.01";
+		outcomeInput.step = "0.01";
 
 		const saveButton = document.createElement("button");
 		saveButton.innerText = "SAVE";
+		saveButton.classList.add("save-button");
 		saveButton.id = `update-save-${id}`;
+		saveButton.type = "submit";
 
 		const cancelButton = document.createElement("button");
 		cancelButton.innerText = "CANCEL";
 		cancelButton.id = `update-cancel-${id}`;
+		cancelButton.type = "button";
 
 		updateInputsWrapper.appendChild(nameInput);
 		updateInputsWrapper.appendChild(outcomeInput);
@@ -94,6 +104,23 @@ const renderUpdateInputs = (e) => {
 
 		cancelButton.addEventListener("click", cancelEditInputs);
 		saveButton.addEventListener("click", editOutcomesList);
+		updateInputsWrapper.addEventListener("submit", editOutcomesList);
+
+		updateInputsWrapper.addEventListener("submit", (e) => {
+			e.preventDefault();
+
+			const newName = nameInput.value.trim();
+			const newIncomeValue = parseFloat(incomeInput.value);
+
+			if (!newName || newIncomeValue <= 0) {
+				alert("Proszę podać prawidłową nazwę i wartość dodatniego przychodu.");
+				return;
+			}
+
+			editIncomesList(id, newName, newIncomeValue);
+
+			listElement.removeChild(updateInputsWrapper);
+		});
 	}
 };
 
